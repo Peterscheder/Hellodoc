@@ -1,0 +1,18 @@
+
+
+<script type="text/javascript">
+  var apiKey    = "44826842";
+  var sessionId = "2_MX40NDgyNjg0Mn5-VHVlIEp1biAwMyAxMzoyMjowMCBQRFQgMjAxNH4wLjMwMzE5ODF-UH4";
+  var token     = "T1==cGFydG5lcl9pZD00NDgyNjg0MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz03N2EwYzllMjYzYTIzMzYyNmU4YjIzODhjYmFkNmZiNDQ3YTI1ZjRlOnJvbGU9c3Vic2NyaWJlciZzZXNzaW9uX2lkPTJfTVg0ME5EZ3lOamcwTW41LVZIVmxJRXAxYmlBd015QXhNem95TWpvd01DQlFSRlFnTWpBeE5INHdMak13TXpFNU9ERi1VSDQmY3JlYXRlX3RpbWU9MTQwMTgyNjkyMyZub25jZT0wLjU3MjAyMjE4MjkzMjcxNDImZXhwaXJlX3RpbWU9MTQwMTgzMDQ0NSZjb25uZWN0aW9uX2RhdGE9";
+ 
+  var session = OT.initSession(apiKey, sessionId);
+ 
+  session.on("streamCreated", function(event) {
+    session.subscribe(event.stream);
+  });
+ 
+  session.connect(token, function(error) {
+    var publisher = OT.initPublisher();
+    session.publish(publisher);
+  });
+</script>
